@@ -13,25 +13,21 @@ const Navbar = () => {
     <>
       <Nav>
         <Bars />
-  
         <NavMenu>
-          <NavLink to='/about' activeStyle>
-            About
+          <NavLink to='/home' activestyle="true">
+            Home
           </NavLink>
-          <NavLink to='/events' activeStyle>
-            Events
+          <NavLink to='/unternehmen' activestyle="true">
+            Unternehmen
           </NavLink>
-          <NavLink to='/annual' activeStyle>
-            Annual Report
+          <NavLink to='/produkte' activestyle="true">
+            Produkte
           </NavLink>
-          <NavLink to='/team' activeStyle>
-            Teams
+          <NavLink to='/service' activestyle="true">
+            Service
           </NavLink>
-          <NavLink to='/blogs' activeStyle>
-            Blogs
-          </NavLink>
-          <NavLink to='/sign-up' activeStyle>
-            Sign Up
+          <NavLink to='/kontakt' activestyle="true">
+            Kontakt
           </NavLink>
           {/* Second Nav */}
           {/* <NavBtnLink to='/sign-in'>Sign In</NavBtnLink> */}
