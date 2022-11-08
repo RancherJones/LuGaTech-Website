@@ -1,6 +1,6 @@
 import React from 'react';
   
-const AnnualReport = () => {
+const Unternehmen = () => {
   return (
     <div
       style={{
@@ -10,9 +10,9 @@ const AnnualReport = () => {
         height: '100vh'
       }}
     >
-      <h1>Annual Report</h1>
+      <h1>Aerggeregrgethereport</h1>
     </div>
   );
 };
   
-export default AnnualReport;
+export default Unternehmen
