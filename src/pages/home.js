@@ -23,7 +23,7 @@ function Home(){
   }, [url_id])
 
 
-if(daten){console.log();
+if(daten){
   return (
     <div className='mainDiv mb-2 px-1 py-4 rounded'>
     <Container fluid>

@@ -1,19 +1,15 @@
 import React, { useState, useEffect } from 'react';
 import { directus } from "../services/directus";
-import Carousel from 'react-bootstrap/Carousel';
-import Container from 'react-bootstrap/Container';
-import Row from 'react-bootstrap/Row';
-import Col from 'react-bootstrap/Col';
 
   
 function Karriere(){
-  const url_id = 'https://gop4n9bn.directus.app/items/HOME'
+  const url_id = 'https://gop4n9bn.directus.app/items/KARRIERE'
   const [daten, setdaten] = useState(null)
-  const url = 'https://gop4n9bn.directus.app/assets/'
+  //const url = 'https://gop4n9bn.directus.app/assets/'
 
 
   useEffect(() => {
-    directus.items("HOME").readByQuery({})
+    directus.items("KARRIERE").readByQuery({})
     .then(response => {
       console.log(response);
       setdaten(response.data)
@@ -25,7 +21,8 @@ function Karriere(){
 if(daten){
   return (
     <div className='mainDiv mb-2 px-1 py-4 rounded'>
-      
+      <li><a href="/karriere/bewerbung" className="footer-link">Stellenangebote</a></li>
+
     </div>
 
 )

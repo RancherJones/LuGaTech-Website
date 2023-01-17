@@ -13,7 +13,10 @@ import Service from "./pages/service";
 import Kontakt from "./pages/kontakt";
 import Footer from "./components/Footer/Footer";
 import Karriere from "./pages/karriere";
-
+import Impressum from "./pages/impressum";
+import AnfrageFormProdukt from "./components/Forms/AnfrageFormProdukt";
+import AnfrageFormAllgemein from "./components/Forms/AnfrageFormAllgemein";
+import Bewerbung from "./components/Forms/Bewerbung";
 
 function App() {
   return (
@@ -27,6 +30,10 @@ function App() {
             <Route path="/service" element={<Service/>} />
             <Route path="/kontakt" element={<Kontakt/>} />
             <Route path="/karriere" element={<Karriere/>} />
+            <Route path="/impressum" element={<Impressum/>} />
+            <Route path="/anfrage/produkt" element={<AnfrageFormProdukt/>} />
+            <Route path="/anfrage/allgemein" element={<AnfrageFormAllgemein/>} />
+            <Route path="/karriere/bewerbung" element={<Bewerbung/>} />
           </Routes>
           <Footer />
       </BrowserRouter>

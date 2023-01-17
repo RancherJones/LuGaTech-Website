@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { directus } from "../services/directus";
+import { directus } from "../../services/directus";
 import Button from 'react-bootstrap/Button';
 import Col from 'react-bootstrap/Col';
 import Form from 'react-bootstrap/Form';
@@ -11,15 +11,15 @@ import Tooltip from 'react-bootstrap/Tooltip';
 import emailjs from '@emailjs/browser';
 
   
-function Service(){
-  const url_id = 'https://gop4n9bn.directus.app/items/SERVICE'
+function Bewerbung(){
+  const url_id = 'https://gop4n9bn.directus.app/items/bewerbung'
   const [daten, setdaten] = useState(null)
   //const url = 'https://gop4n9bn.directus.app/assets/'
   const form = useRef();
 
 
   useEffect(() => {
-    directus.items("SERVICE").readByQuery({})
+    directus.items("bewerbung").readByQuery({})
     .then(response => {
       console.log(response);
       setdaten(response.data)
@@ -125,9 +125,9 @@ if(daten){
     <Container fluid>
           {/* Ab da fangt der Body an */}
     <Row>
-      <Col id="service_body_text" >
+      <Col id="bewerbung_body_text" >
           {
-            setTimeout(()=>{document.getElementById("service_body_text").innerHTML=daten.Text_Serviceinformation}, 0)
+            setTimeout(()=>{document.getElementById("bewerbung_body_text").innerHTML=daten.Text_Bewerbung}, 0)
           }
       </Col>
     </Row>
@@ -225,4 +225,4 @@ return (
 )
 }
   
-export default Service
+export default Bewerbung

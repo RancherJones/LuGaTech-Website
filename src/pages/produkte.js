@@ -3,8 +3,11 @@ import { directus } from "../services/directus";
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import Button from 'react-bootstrap/Button';
+//import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import Accordion from 'react-bootstrap/Accordion';
+import { useAccordionButton } from 'react-bootstrap/AccordionButton';
+
   
 const Produkte = () => {
 
@@ -16,21 +19,37 @@ const Produkte = () => {
 
 
   useEffect(() => {
-    directus.items("PRODUKTPALETTE").readByQuery({})                //Read Many muss ich noch machen damit alles ausgelesen wird
+    directus.items("PRODUKTPALETTE").readByQuery({})
     .then(response => {setdatenPalette(response.data)})
   
   }, [url_id_palette])
 
   useEffect(() => {
-    directus.items("PRODUKTE").readByQuery({})                //Read Many muss ich noch machen damit alles ausgelesen wird
+    directus.items("PRODUKTE").readByQuery({})
     .then(response => {setdaten(response.data)})
   
   }, [url_id])
 
+  function CustomToggle({ children, eventKey }) {
+    const decoratedOnClick = useAccordionButton(eventKey, () =>
+      console.log('totally custom!'),
+    );
+  
+    return (
+      <button
+        type="button"
+        style={{ backgroundColor: 'pink' }}
+        onClick={decoratedOnClick}
+      >
+        {children}
+      </button>
+    );
+  }
+
 const datenProdukte = (element) => {
   return (
-  <Col>
-    <Card 
+  <Col xs={12} md={4} className="pt-5">
+    {/* <Card 
     style={{width: '18rem',
     height: '35rem',}}>
     <Card.Img variant="top" src={url + element.Bild} />
@@ -41,7 +60,38 @@ const datenProdukte = (element) => {
       </Card.Text>
       <Button variant="primary">Mehr Details</Button>
     </Card.Body>
-    </Card>
+    </Card> 
+        <Accordion defaultActiveKey={['0']} alwaysOpen>
+      <Accordion.Item eventKey="1">
+        <Accordion.Header src={url + element.Bild}>{element.Produktname}</Accordion.Header>
+        <Accordion.Body>
+        {element.Beschreibung}
+        </Accordion.Body>
+      </Accordion.Item>
+    </Accordion>
+    */}
+        <Accordion defaultActiveKey="0">
+      <Card>
+        <Card.Header>
+        <Card.Img variant="top" src={url + element.Bild} />
+        <Card.Title>{element.Produktname}</Card.Title>
+        <CustomToggle eventKey="0">Click me!</CustomToggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="0">
+          <Card.Body>
+          <Card.Text>{element.Beschreibung}</Card.Text>
+          </Card.Body>
+        </Accordion.Collapse>
+      </Card>
+      <Card>
+        <Card.Header>
+          <CustomToggle eventKey="1">Click me!</CustomToggle>
+        </Card.Header>
+        <Accordion.Collapse eventKey="1">
+          <Card.Body>Hello! I'm another body</Card.Body>
+        </Accordion.Collapse>
+      </Card>
+    </Accordion>
   </Col>)
 }
 

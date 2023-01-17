@@ -13,3 +13,19 @@
   }
 }
 
+.bg-blue {
+  background-color: #2596be;
+}
+
+.footer-link{
+  color: #a1a1a1;
+}
+
+.footer-link:hover {
+  color: white;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+}
