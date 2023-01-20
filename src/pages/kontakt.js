@@ -7,7 +7,7 @@ import Col from 'react-bootstrap/Col';
 function Kontakt(){
   const url_id = 'https://gop4n9bn.directus.app/items/KONTAKT'
   const [daten, setdaten] = useState(null)
-  const url = 'https://gop4n9bn.directus.app/assets/'
+  //const url = 'https://gop4n9bn.directus.app/assets/'
 
 
   useEffect(() => {

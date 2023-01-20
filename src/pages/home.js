@@ -4,7 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-import "../App.css";
 
   
 function Home(){
@@ -38,8 +37,7 @@ if(daten){
           alt="First slide"
         />
         <Carousel.Caption>
-          <h5>First slide label</h5>
-          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+          {/* Da kann man eine Beschriftung rein tun */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -49,8 +47,7 @@ if(daten){
           alt="Second slide"
         />
         <Carousel.Caption>
-          <h5>Second slide label</h5>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+          {/* Da kann man eine Beschriftung rein tun */}
         </Carousel.Caption>
       </Carousel.Item>
       <Carousel.Item>
@@ -60,10 +57,7 @@ if(daten){
           alt="Third slide"
         />
         <Carousel.Caption>
-          <h5>Third slide label</h5>
-          <p>
-            Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-          </p>
+          {/* Da kann man eine Beschriftung rein tun */}
         </Carousel.Caption>
       </Carousel.Item>
     </Carousel>
@@ -74,45 +68,12 @@ if(daten){
       <Col className='px-4' id="home_body_news" >
           {
             setTimeout(()=>{document.getElementById("home_body_news").innerHTML=daten.Text_Home}, 0)
-          //console.log(document.getElementById("Text1234"))
-          //document.getElementById("Text1234").innerHTML=daten.Text1
-          //daten.Text1
-          //.replace('"', "")
           }
       </Col>
     </Row>
   </Container>
     
   </div>
-
-
-/*  
-    <div>
-      <div>
-      <h1>LuGa-Tech</h1>
-      <h2>Gas- und Drucklufttechnik</h2>
-      <img
-      src = {url + daten.data[0].Bild}
-      alt = "Logo"/>
-
-
-      <div>
-        <h1>News</h1>
-
-        <h2>{daten.data[0].News_Titel}</h2>
-
-        <p>{daten.data[0].News}</p>
-      </div>
-      </div>
-  </div>
-
-  <div style={{
-      boxShadow: '1px 2px 9px #888888',
-      marginLeft: '15%',
-      marginRight: '15%',
-      
-      }}>
-  */
 )
 }
 return (

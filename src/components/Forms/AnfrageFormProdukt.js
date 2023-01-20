@@ -77,7 +77,7 @@ function AnfrageFormProdukt(){
           "service_98196cf",
           "template_y2bug3o",
           form,
-          "EdfYATFi5sjnfaQv"
+          "EdfYATFi5sjnfaQvy"
         )
         .then(
           //Success
@@ -105,7 +105,7 @@ function AnfrageFormProdukt(){
             <Overlay target={target.current} show placement="right">
             {(props) => (
               <Tooltip id="overlay-example" {...props}>
-                Email FAILED beeing sent! &#10007; Please Contact the Owner &#9888;
+                Email FAILED being sent! &#10007; Please Contact the Owner &#9888;
               </Tooltip>
             )}
           </Overlay>);
