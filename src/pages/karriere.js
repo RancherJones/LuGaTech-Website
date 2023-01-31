@@ -1,5 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { directus } from "../services/directus";
+import Container from 'react-bootstrap/Container';
+import Row from 'react-bootstrap/Row';
+import Col from 'react-bootstrap/Col';
 
   
 function Karriere(){
@@ -20,11 +23,22 @@ function Karriere(){
 
 if(daten){
   return (
+
     <div className='mainDiv mb-2 px-1 py-4 rounded'>
-      <li><a href="/karriere/bewerbung" className="footer-link">Stellenangebote</a></li>
+    <Container fluid>
+      <Row>
+        <Col className='px-4' id="karriere_body" >
+        {
+          setTimeout(()=>{document.getElementById("karriere_body").innerHTML=daten.Text_Karriere}, 0)
+        }
+        </Col>
+      </Row>
+  </Container>
 
-    </div>
-
+  <div className='Divkarriere mb-2 px-1 py-4 rounded'>
+    <a href="/karriere/bewerbung" className="footer-link">Bewerbungsanfrage senden</a>
+  </div>
+  </div>
 )
 }
 return (

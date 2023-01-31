@@ -75,7 +75,7 @@ function Bewerbung(){
       emailjs
         .sendForm(
           "service_98196cf",
-          "template_y2bug3o",
+          "template_r43hqkp",
           form,
           "EdfYATFi5sjnfaQvy"
         )
