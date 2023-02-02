@@ -82,9 +82,13 @@ const datenProdukte = (element) => {
   );
 }
 return (
-  <div>
-      <h1>Nothing Here</h1>
-  </div>
+<div className='mainDiv mb-2 px-1 py-4 rounded'>
+<div class="loader">Loading...</div>
+    <img
+      src="FFFFFF.png"
+      alt="Loading..."
+    />
+</div>
 )
 };
   

@@ -4,7 +4,6 @@ import Carousel from 'react-bootstrap/Carousel';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
-
   
 function Home(){
   const url_id = 'https://gop4n9bn.directus.app/items/HOME'
@@ -77,9 +76,13 @@ if(daten){
 )
 }
 return (
-  <div>
-      <h1>Nothing Here</h1>
-  </div>
+<div className='mainDiv mb-2 px-1 py-4 rounded'>
+<div class="loader">Loading...</div>
+    <img
+      src="FFFFFF.png"
+      alt="Loading..."
+    />
+</div>
 )
 }
   

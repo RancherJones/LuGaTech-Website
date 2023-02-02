@@ -34,7 +34,6 @@ function NavigationBar() {
                   <Nav.Link href="/service">Service</Nav.Link>
                   <Nav.Link href="/karriere">Karriere</Nav.Link>
                   <Nav.Link href="/kontakt">Kontakt</Nav.Link>
-                  <Nav.Link href="/impressum">Impressum</Nav.Link>
 
                   {/* Dropdown */}
                   {/*

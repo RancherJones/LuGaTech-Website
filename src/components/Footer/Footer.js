@@ -27,7 +27,7 @@ const Footer = () => (
     </Row>
     <Row>
     <Col xs={12} md={6} className="mx-auto text-center">
-      <p className='pt-5'>Copyright © 2013 LuGa-Tech. All Rights Reserved.</p>
+      <a href="/impressum" className='pt-5 footer-link'>Copyright © 2013 LuGa-Tech. All Rights Reserved.</a>
       </Col>
     </Row>
   </Container>
