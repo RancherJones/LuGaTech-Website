@@ -74,10 +74,10 @@ function Bewerbung(){
       event.preventDefault();
       emailjs
         .sendForm(
-          "service_98196cf",
-          "template_r43hqkp",
+          "service_b79ufh6",
+          "template_9mr3iou",
           form,
-          "EdfYATFi5sjnfaQvy"
+          "l-LARs1989EPmPg-C"
         )
         .then(
           //Success

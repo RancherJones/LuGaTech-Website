@@ -74,10 +74,10 @@ function AnfrageFormProdukt(){
       event.preventDefault();
       emailjs
         .sendForm(
-          "service_98196cf",
-          "template_y2bug3o",
+          "service_b79ufh6",
+          "template_hsbxfsg",
           form,
-          "EdfYATFi5sjnfaQvy"
+          "l-LARs1989EPmPg-C"
         )
         .then(
           //Success

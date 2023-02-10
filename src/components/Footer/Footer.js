@@ -12,7 +12,7 @@ const Footer = () => (
       <Col xs={12} md={4} className="mx-auto text-center">
         <h5 className='pt-5'>Kontakt</h5>
         <ul className="list-unstyled">
-          <li><a href="tel:+423 370 1212" className="footer-link">Telefon: +423 370 1212</a></li>
+          <li><a href="tel:+43 5523 51668" className="footer-link">Telefon: +43 5523 51668</a></li>
           <li><a href="mailto:office@lugatech.at" className="footer-link">Email: office@lugatech.at</a></li>
         </ul>
       </Col>

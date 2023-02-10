@@ -49,16 +49,6 @@ if(daten){
           {/* Da kann man eine Beschriftung rein tun */}
         </Carousel.Caption>
       </Carousel.Item>
-      <Carousel.Item>
-        <img
-          className="d-block w-100 fluid rounded"
-          src={url + daten.Bild_Slide_3}
-          alt="Third slide"
-        />
-        <Carousel.Caption>
-          {/* Da kann man eine Beschriftung rein tun */}
-        </Carousel.Caption>
-      </Carousel.Item>
     </Carousel>
       </Col>
     </Row>
