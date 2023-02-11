@@ -220,7 +220,7 @@ if(daten){
 }
 return (
 <div className='mainDiv mb-2 px-1 py-4 rounded'>
-<div class="loader">Loading...</div>
+<div className="loader">Loading...</div>
     <img
       src="FFFFFF.png"
       alt="Loading..."

@@ -11,24 +11,41 @@ import { useAccordionButton } from 'react-bootstrap/AccordionButton';
   
 const Produkte = () => {
 
-  const url_id_palette = 'https://gop4n9bn.directus.app/items/PRODUKTPALETTE'
-  const [datenPalette, setdatenPalette] = useState(null)
-  const url_id = 'https://gop4n9bn.directus.app/items/PRODUKTE'
-  const [daten, setdaten] = useState(null)
+  const url_id_palette_erzeugung = 'https://gop4n9bn.directus.app/items/Produktpalette_Erzeugung'
+  const [datenPaletteErz, setdatenPaletteErz] = useState(null)
+  const url_id_erzeugung = 'https://gop4n9bn.directus.app/items/PRODUKTE_ERZEUGUNG'
+  const [datenErz, setdatenErz] = useState(null)
+
+  const url_id_palette_aufbereitung = 'https://gop4n9bn.directus.app/items/Produktpalette_Aufbereitung'
+  const [datenPaletteAuf, setdatenPaletteAuf] = useState(null)
+  const url_id_aufbereitung = 'https://gop4n9bn.directus.app/items/PRODUKTE_AUFBEREITUNG'
+  const [datenAuf, setdatenAuf] = useState(null)
   const url = 'https://gop4n9bn.directus.app/assets/'
 
 
   useEffect(() => {
-    directus.items("PRODUKTPALETTE").readByQuery({})
-    .then(response => {setdatenPalette(response.data)})
+    directus.items("Produktpalette_Erzeugung").readByQuery({})
+    .then(response => {setdatenPaletteErz(response.data)})
   
-  }, [url_id_palette])
+  }, [url_id_palette_erzeugung])
 
   useEffect(() => {
-    directus.items("PRODUKTE").readByQuery({})
-    .then(response => {setdaten(response.data)})
+    directus.items("PRODUKTE_ERZEUGUNG").readByQuery({})
+    .then(response => {setdatenErz(response.data)})
   
-  }, [url_id])
+  }, [url_id_erzeugung])
+
+  useEffect(() => {
+    directus.items("Produktpalette_Aufbereitung").readByQuery({})
+    .then(response => {setdatenPaletteAuf(response.data)})
+  
+  }, [url_id_palette_aufbereitung])
+
+  useEffect(() => {
+    directus.items("PRODUKTE_AUFBEREITUNG").readByQuery({})
+    .then(response => {setdatenAuf(response.data)})
+  
+  }, [url_id_aufbereitung])
 
   function CustomToggle({ children, eventKey }) {
     const decoratedOnClick = useAccordionButton(eventKey);
@@ -42,7 +59,7 @@ const Produkte = () => {
     );
   }
 
-const datenProdukte = (element) => {
+const datenProdukteErz = (element) => {
     return (
       <Col xs={12} sm={12} md={6} lg={6} xl={4} className="mt-3">
             <Accordion defaultActiveKey="1">
@@ -63,19 +80,50 @@ const datenProdukte = (element) => {
       </Col>)
   }
 
-  if(daten){
+  const datenProdukteAuf = (element) => {
+    return (
+      <Col xs={12} sm={12} md={6} lg={6} xl={4} className="mt-3">
+            <Accordion defaultActiveKey="1">
+          <Card>
+            <Card.Header>
+            <Card.Img variant="top" src={url + element.Bild}/>
+            <Card.Title>{element.Produktname}</Card.Title>
+            <CustomToggle eventKey="0">Learn More</CustomToggle>
+            </Card.Header>
+            <Accordion.Collapse eventKey="0">
+              <Card.Body>
+              <Card.Text>{element.Beschreibung}</Card.Text>
+              <Button variant='secondary' href='/anfrage/produkt'>Anfrage Senden &#128231;</Button>
+              </Card.Body>
+            </Accordion.Collapse>
+          </Card>
+        </Accordion>
+      </Col>)
+  }
+
+  if(datenErz && datenAuf){
   return (
-    <div className='mainDiv mb-2 px-1 py-4 rounded' id="bliblup">
+    <div className='mainDiv mb-2 px-1 py-4 rounded'>
     <Container fluid>
       <Row>
-        <Col id="produkte_body_beschreibung" >
+        <Col id="produkte_erzeugung_body_beschreibung" >
           {
-            setTimeout(()=>{document.getElementById("produkte_body_beschreibung").innerHTML=datenPalette.Produktpalette}, 0)
+            setTimeout(()=>{document.getElementById("produkte_erzeugung_body_beschreibung").innerHTML=datenPaletteErz.Produktpalette_Erzeugung}, 0)
           }
         </Col>
     </Row>
     <Row>
-      {daten.map(datenProdukte)}
+      {datenErz.map(datenProdukteErz)}
+    </Row>
+    <Row>
+        <Col id="produkte_aufbereitung_body_beschreibung" >
+          {
+            setTimeout(()=>{document.getElementById("produkte_aufbereitung_body_beschreibung").innerHTML=datenPaletteAuf.Produktpalette_Aufbereitung}, 0)
+          }
+        </Col>
+    </Row>
+    <Row>
+      {datenAuf.map(datenProdukteAuf)}
     </Row>
   </Container>
   </div>
@@ -83,7 +131,7 @@ const datenProdukte = (element) => {
 }
 return (
 <div className='mainDiv mb-2 px-1 py-4 rounded'>
-<div class="loader">Loading...</div>
+<div className="loader">Loading...</div>
     <img
       src="FFFFFF.png"
       alt="Loading..."
