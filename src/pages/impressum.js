@@ -7,8 +7,8 @@ import Container from'react-bootstrap/Container';
   
 const Impressum = () => {
 
-  const url_id = 'https://gop4n9bn.directus.app/items/IMPRESSUM'
-  //const url = 'https://gop4n9bn.directus.app/assets/'
+  const url_id = 'https://lugatech.directus.app/items/IMPRESSUM'
+  //const url = 'https://lugatech.directus.app/assets/'
   const [daten, setdaten] = useState(null)
 
 

@@ -12,9 +12,9 @@ import emailjs from '@emailjs/browser';
 
   
 function Service(){
-  const url_id = 'https://gop4n9bn.directus.app/items/SERVICE'
+  const url_id = 'https://lugatech.directus.app/items/SERVICE'
   const [daten, setdaten] = useState(null)
-  //const url = 'https://gop4n9bn.directus.app/assets/'
+  //const url = 'https://lugatech.directus.app/assets/'
   const form = useRef();
 
 

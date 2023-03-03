@@ -12,14 +12,14 @@ import emailjs from '@emailjs/browser';
 
   
 function Bewerbung(){
-  const url_id = 'https://gop4n9bn.directus.app/items/bewerbung'
+  const url_id = 'https://lugatech.directus.app/items/Bewerbung'
   const [daten, setdaten] = useState(null)
-  //const url = 'https://gop4n9bn.directus.app/assets/'
+  //const url = 'https://lugatech.directus.app/assets/'
   const form = useRef();
 
 
   useEffect(() => {
-    directus.items("bewerbung").readByQuery({})
+    directus.items("Bewerbung").readByQuery({})
     .then(response => {
       console.log(response);
       setdaten(response.data)

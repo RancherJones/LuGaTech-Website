@@ -11,16 +11,16 @@ import { useAccordionButton } from 'react-bootstrap/AccordionButton';
   
 const Produkte = () => {
 
-  const url_id_palette_erzeugung = 'https://gop4n9bn.directus.app/items/Produktpalette_Erzeugung'
+  const url_id_palette_erzeugung = 'https://lugatech.directus.app/items/Produktpalette_Erzeugung'
   const [datenPaletteErz, setdatenPaletteErz] = useState(null)
-  const url_id_erzeugung = 'https://gop4n9bn.directus.app/items/PRODUKTE_ERZEUGUNG'
+  const url_id_erzeugung = 'https://lugatech.directus.app/items/PRODUKTE_ERZEUGUNG'
   const [datenErz, setdatenErz] = useState(null)
 
-  const url_id_palette_aufbereitung = 'https://gop4n9bn.directus.app/items/Produktpalette_Aufbereitung'
+  const url_id_palette_aufbereitung = 'https://lugatech.directus.app/items/Produktpalette_Aufbereitung'
   const [datenPaletteAuf, setdatenPaletteAuf] = useState(null)
-  const url_id_aufbereitung = 'https://gop4n9bn.directus.app/items/PRODUKTE_AUFBEREITUNG'
+  const url_id_aufbereitung = 'https://lugatech.directus.app/items/PRODUKTE_AUFBEREITUNG'
   const [datenAuf, setdatenAuf] = useState(null)
-  const url = 'https://gop4n9bn.directus.app/assets/'
+  const url = 'https://lugatech.directus.app/assets/'
 
 
   useEffect(() => {

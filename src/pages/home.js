@@ -6,9 +6,9 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
   
 function Home(){
-  const url_id = 'https://gop4n9bn.directus.app/items/HOME'
+  const url_id = 'https://lugatech.directus.app/items/HOME'
   const [daten, setdaten] = useState(null)
-  const url = 'https://gop4n9bn.directus.app/assets/'
+  const url = 'https://lugatech.directus.app/assets/'
 
 
   useEffect(() => {
